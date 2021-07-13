@@ -180,6 +180,8 @@ function _run() {
 	} else if (!isPreload && isStart) {
 		window.start();
 		window._update();
+	} else {
+		window._update();
 	}
 }
 
