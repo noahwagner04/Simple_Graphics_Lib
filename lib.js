@@ -99,8 +99,8 @@ var mouseCanvasY = 0;
 // }
 
 function mouseMoveWindow(e) {
-	mouseX = e.offsetX;
-	mouseY = e.offsetY;
+	mouseX = e.pageX;
+	mouseY = e.pageY;
 	if (canvas && e.target === canvas) mouseInCanvas = true;
 	else mouseInCanvas = false;
 }
