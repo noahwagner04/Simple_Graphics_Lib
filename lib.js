@@ -39,7 +39,7 @@ function getPixelBuffer(image) {
 	return ctx.getImageData(0, 0, image.width, image.height).data;
 }
 
-// user manually assigns the resolve with their variable of choosing in a .then() statment (also a good place to but getPixelBuffer func)
+// user manually assigns the resolve with their variable of choosing in a .then() statment (also a good place to put getPixelBuffer func)
 function loadImage(path, width, height) {
 	return new Promise((resolve, reject) => {
 		let image;
@@ -52,7 +52,7 @@ function loadImage(path, width, height) {
 		}
 
 		image.onerror = function(e) {
-			reject(`${e.type}: Loading Image`);
+			reject(`${e.type}: Loading image with path ${path}`);
 		}
 		image.src = path;
 	});
